@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — VANDENCODE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#110B11; --surface:#1a121a; --surface2:#1f1820; --border:#2a1f2a;
+      --muted:#4a3a4a; --text:#e0d8d0; --dim:#907880;
+      --forest:#065143; --sage:#70B77E; --acid:#c8f000; --blush:#FCB0B3;
+      --ff-d:'Bebas Neue',sans-serif; --ff-s:'Playfair Display',serif; --ff-m:'IBM Plex Mono',monospace;
+      --max:880px; --gut:clamp(1.5rem,5vw,4rem); --nav-h:60px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--ff-m);font-size:14px;line-height:1.7;overflow-x:hidden;cursor:none}
+    a{color:inherit;text-decoration:none}
+    body::before{content:'';position:fixed;inset:0;z-index:998;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px}
+    #cur{position:fixed;width:10px;height:10px;background:var(--acid);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .16s,height .16s;mix-blend-mode:difference}
+    #cur.big{width:28px;height:28px}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 var(--gut);border-bottom:1px solid var(--border);background:rgba(17,11,17,.92);backdrop-filter:blur(14px)}
+    .nav-logo{font-family:var(--ff-d);font-size:1.65rem;letter-spacing:.06em;color:var(--acid)}
+    .nav-links{display:flex;gap:1.8rem;align-items:center}
+    .nav-links a{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);transition:color .2s}
+    .nav-links a:hover{color:var(--acid)}
+    .nav-links a.nav-special{color:var(--sage);border:1px solid var(--forest);padding:.28rem .85rem}
+    .nav-links a.nav-special:hover{background:var(--forest);color:var(--acid)}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:none;padding:4px}
+    .hamburger span{display:block;height:1.5px;background:var(--acid);transition:transform .3s,opacity .3s,width .3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0;width:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    .nav-drawer{position:fixed;top:var(--nav-h);left:0;right:0;z-index:599;background:rgba(17,11,17,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);display:flex;flex-direction:column;padding:0 var(--gut);max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1),padding .35s}
+    .nav-drawer.open{max-height:400px;padding:1.5rem var(--gut)}
+    .nav-drawer a{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);padding:.75rem 0;border-bottom:1px solid var(--border);transition:color .2s}
+    .nav-drawer a:last-child{border-bottom:none}
+    .nav-drawer a:hover{color:var(--acid)}
+    .nav-drawer a.nav-special{color:var(--sage)}
+
+    /* PAGE HEADER */
+    .page-header{padding:calc(var(--nav-h) + 4rem) var(--gut) 2.5rem;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    .page-header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(var(--border) 1px,transparent 1px);background-size:28px 28px;opacity:.5}
+    .ph-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto}
+    .ph-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:1.5rem;transition:color .2s}
+    .ph-back:hover{color:var(--acid)}
+    .ph-label{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--acid);margin-bottom:.5rem}
+    .ph-title{font-family:var(--ff-d);font-size:clamp(3rem,8vw,6rem);line-height:.9;color:var(--text)}
+    .ph-title span{color:var(--sage)}
+    .ph-meta{font-size:.7rem;color:var(--muted);margin-top:1.25rem;font-style:italic;font-family:var(--ff-s)}
+
+    /* CONTENT */
+    .doc-wrap{max-width:var(--max);margin:0 auto;padding:3.5rem var(--gut) 6rem}
+    .lead-note{
+      background:rgba(252,176,179,.05); border:1px solid rgba(252,176,179,.25);
+      padding:1.25rem 1.5rem; margin-bottom:3rem; font-size:.78rem; color:var(--dim); line-height:1.85;
+    }
+    .lead-note strong{color:var(--blush)}
+
+    /* TOC */
+    .toc{border:1px solid var(--border);padding:1.5rem 1.75rem;margin-bottom:3.5rem;background:var(--surface)}
+    .toc-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acid);margin-bottom:1rem}
+    .toc-list{display:flex;flex-direction:column;gap:.5rem}
+    .toc-list a{font-size:.78rem;color:var(--dim);transition:color .2s;display:flex;align-items:baseline;gap:.6rem}
+    .toc-list a:hover{color:var(--acid)}
+    .toc-list a .toc-dash{color:var(--muted);font-size:.7rem}
+    .toc-part{margin-top:.5rem;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+    .toc-part:first-child{margin-top:0}
+
+    /* SECTIONS */
+    .part-block{margin-bottom:3.5rem}
+    .part-head{
+      display:flex; align-items:baseline; gap:1rem; margin-bottom:.5rem;
+      padding-bottom:.75rem; border-bottom:2px solid var(--forest);
+    }
+    .part-num{font-family:var(--ff-d);font-size:1.1rem;color:var(--acid);letter-spacing:.1em}
+    .part-title{font-family:var(--ff-d);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--text);line-height:1}
+    .part-intro{font-size:.82rem;color:var(--dim);line-height:1.9;margin:1.25rem 0 2rem;font-style:italic;font-family:var(--ff-s)}
+
+    .clause{margin-bottom:1.75rem;scroll-margin-top:90px}
+    .clause-h{
+      font-size:.85rem; font-weight:600; color:var(--sage);
+      letter-spacing:.04em; margin-bottom:.6rem;
+      display:flex; align-items:baseline; gap:.6rem;
+    }
+    .clause-h .c-id{color:var(--acid);font-family:var(--ff-m);font-size:.75rem}
+    .clause p{font-size:.8rem;color:var(--dim);line-height:1.9;margin-bottom:.6rem}
+    .clause ul, .clause ol{margin:.5rem 0 .75rem 1.4rem;display:flex;flex-direction:column;gap:.45rem}
+    .clause li{font-size:.8rem;color:var(--dim);line-height:1.75}
+    .clause li::marker{color:var(--acid)}
+
+    .inline-note{
+      font-size:.72rem; color:var(--blush); font-style:italic;
+      border-left:2px solid var(--blush); padding-left:.85rem; margin:.75rem 0;
+      line-height:1.7;
+    }
+
+    .end-divider{
+      display:flex; align-items:center; gap:1rem; margin:3rem 0 2rem;
+    }
+    .end-divider-line{flex:1;height:1px;background:var(--border)}
+    .end-divider-mark{color:var(--acid);font-size:.7rem;letter-spacing:.2em}
+
+    .contact-block{
+      text-align:center; padding:2rem; border:1px dashed var(--border);
+    }
+    .contact-block p{font-size:.78rem;color:var(--dim);margin-bottom:.75rem}
+    .contact-block a{color:var(--acid);font-size:.85rem;border-bottom:1px solid var(--acid);transition:color .2s}
+    .contact-block a:hover{color:var(--sage);border-color:var(--sage)}
+
+    /* back to top */
+    .back-to-top{
+      position:fixed; bottom:2rem; right:2rem; z-index:50;
+      width:42px;height:42px;border:1px solid var(--border);background:var(--surface);
+      display:flex;align-items:center;justify-content:center;color:var(--acid);
+      font-size:.9rem; opacity:0; pointer-events:none; transition:opacity .3s,border-color .2s;
+    }
+    .back-to-top.show{opacity:1;pointer-events:auto}
+    .back-to-top:hover{border-color:var(--acid)}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:1.75rem var(--gut);display:flex;align-items:center;justify-content:space-between;font-size:.65rem;color:var(--muted);letter-spacing:.1em}
+    .fl{display:flex;gap:1.5rem}
+    .fl a{color:var(--muted);transition:color .2s}
+    .fl a:hover{color:var(--acid)}
+    .fdot{color:var(--blush);margin:0 .3rem}
+
+    @media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}}
+    @media(max-width:600px){body{cursor:auto}#cur{display:none}.hamburger{cursor:pointer}.back-to-top{right:1rem;bottom:1rem}}
+  </style>
+</head>
+<body>
+<div id="cur"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">VANDENCODE</a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="work.html" class="nav-special">Work</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">CV</a>
+    <a href="art.html" class="nav-special">Art &amp; Design ✦</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hbg" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html#about" onclick="closeDrawer()">About</a>
+  <a href="work.html" class="nav-special" onclick="closeDrawer()">Work</a>
+  <a href="index.html#skills" onclick="closeDrawer()">Skills</a>
+  <a href="index.html#experience" onclick="closeDrawer()">CV</a>
+  <a href="art.html" class="nav-special" onclick="closeDrawer()">Art &amp; Design ✦</a>
+  <a href="index.html#contact" onclick="closeDrawer()">Contact</a>
+</div>
+
+<div class="page-header">
+  <div class="ph-inner">
+    <a href="index.html" class="ph-back">← Back to Home</a>
+    <div class="ph-label">Legal</div>
+    <div class="ph-title">TERMS &amp;<br><span>CONDITIONS</span></div>
+    <p class="ph-meta">Last updated: [DD Month YYYY] · Applies to all web/software and art/design commission services provided by VANDENCODE.</p>
+  </div>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="lead-note">
+    <strong>Plain-language summary:</strong> this page sets out how payments, deposits, deadlines, revisions, and ownership work when you hire VANDENCODE for a website/software project or an art/design commission. By paying a deposit or accepting a quote, you agree to these terms. The full legal text is below — if anything is unclear, email <a href="mailto:vandencode@gmail.com" style="color:var(--blush)">vandencode@gmail.com</a> before starting a project.
+  </div>
+
+  <div class="toc">
+    <div class="toc-label">On This Page</div>
+    <div class="toc-list">
+      <div class="toc-part">Part A — General Terms</div>
+      <a href="#a1"><span class="toc-dash">—</span>A1. About VANDENCODE</a>
+      <a href="#a3"><span class="toc-dash">—</span>A3. Fees &amp; Payment Terms</a>
+      <a href="#a4"><span class="toc-dash">—</span>A4. Deposit Policy</a>
+      <a href="#a5"><span class="toc-dash">—</span>A5. Invoices Explained</a>
+      <a href="#a6"><span class="toc-dash">—</span>A6. Late Payment</a>
+      <a href="#a8"><span class="toc-dash">—</span>A8. Termination</a>
+      <a href="#a9"><span class="toc-dash">—</span>A9. Liability</a>
+
+      <div class="toc-part">Part B — Web &amp; Software</div>
+      <a href="#b1"><span class="toc-dash">—</span>B1. Project Estimates</a>
+      <a href="#b2"><span class="toc-dash">—</span>B2. Payment Schedule</a>
+      <a href="#b5"><span class="toc-dash">—</span>B5. Ownership &amp; IP</a>
+      <a href="#b7"><span class="toc-dash">—</span>B7. Warranty &amp; Support</a>
+
+      <div class="toc-part">Part C — Art &amp; Design</div>
+      <a href="#c1"><span class="toc-dash">—</span>C1. Commission Pricing</a>
+      <a href="#c2"><span class="toc-dash">—</span>C2. Payment Schedule</a>
+      <a href="#c5"><span class="toc-dash">—</span>C5. Usage Rights &amp; Ownership</a>
+      <a href="#c7"><span class="toc-dash">—</span>C7. Cancellation</a>
+    </div>
+  </div>
+
+  <!-- ══════════ PART A ══════════ -->
+  <div class="part-block">
+    <div class="part-head">
+      <span class="part-num">PART A</span>
+      <span class="part-title">General Terms</span>
+    </div>
+    <p class="part-intro">These General Terms apply across all services provided by VANDENCODE, regardless of whether the engagement relates to web/software development or art and design commission work. Part B and Part C contain additional terms specific to each service type, applying in addition to these General Terms.</p>
+
+    <div class="clause" id="a1">
+      <div class="clause-h"><span class="c-id">A1</span>About VANDENCODE</div>
+      <p>VANDENCODE is the freelance trading name of Naomi VanDenBerghe, operating as a sole trader based in Melbourne, Victoria, Australia. All references to &ldquo;the Contractor&rdquo; in this document, in any associated contract, or on any invoice refer to Naomi VanDenBerghe trading as VANDENCODE.</p>
+      <ul>
+        <li>Business contact: vandencode@gmail.com</li>
+        <li>Website: vandencode.netlify.app</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="a2">
+      <div class="clause-h"><span class="c-id">A2</span>How These Terms Apply</div>
+      <p>By engaging VANDENCODE for any project — whether via a signed contract, a written quote you accept, or a deposit invoice you pay — you agree to be bound by these Terms &amp; Conditions. Where a specific signed contract exists for a project, that contract's specific clauses take precedence over this document where they conflict; otherwise these Terms fill any gaps.</p>
+    </div>
+
+    <div class="clause" id="a3">
+      <div class="clause-h"><span class="c-id">A3</span>Fees &amp; Payment Terms</div>
+      <p>Fees for each project are set out in a written quote or contract prior to commencement. Unless otherwise agreed in writing:</p>
+      <ul>
+        <li>Web/software development work is billed at an hourly rate, with a fixed project estimate provided in advance (see Part B).</li>
+        <li>Art and design commission work is billed at a flat commission rate agreed before work begins (see Part C).</li>
+      </ul>
+      <p>All fees are quoted in Australian Dollars (AUD) and are inclusive of GST only if VANDENCODE is registered for GST at the time of the project. Each invoice will state clearly whether GST applies.</p>
+    </div>
+
+    <div class="clause" id="a4">
+      <div class="clause-h"><span class="c-id">A4</span>Deposit Policy</div>
+      <p>A non-refundable deposit is required before work commences on any project, web or art-related. The deposit secures your place in the Contractor's schedule and compensates for time blocked out on your behalf.</p>
+      <ul>
+        <li>Standard deposit: 20% of the estimated project total for web/software projects (see Part B for the full payment schedule).</li>
+        <li>Standard deposit: 50% of the agreed commission price for art/design commissions, payable before any concept work begins (see Part C).</li>
+      </ul>
+      <p>Once work has commenced, the deposit is non-refundable, even if the Client later decides not to proceed.</p>
+    </div>
+
+    <div class="clause" id="a5">
+      <div class="clause-h"><span class="c-id">A5</span>Invoices Explained</div>
+      <p>All invoices issued by VANDENCODE are payable within 10 days of the invoice date, unless an alternative due date is explicitly stated on the invoice itself.</p>
+      <ul>
+        <li>Invoices clearly state the amount due, the due date, a description of the work/milestone the invoice relates to, and payment instructions.</li>
+        <li>Payment is considered received once funds have cleared in the Contractor's nominated account — not on the date a transfer is initiated.</li>
+        <li>It is the Client's responsibility to ensure invoices are paid by the due date. If you anticipate a delay, contact VANDENCODE before the due date wherever possible.</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="a6">
+      <div class="clause-h"><span class="c-id">A6</span>Late Payment</div>
+      <p>If an invoice is not paid in full by its due date, the following applies:</p>
+      <ol>
+        <li>A reminder is sent on or shortly after the due date.</li>
+        <li>If payment is not received within 7 days of the due date, all work on the project is paused until the outstanding invoice is paid in full. Timelines are extended by the length of the delay.</li>
+        <li>If payment is not received within 14 days of the due date, a flat late fee of <strong style="color:var(--blush)">AUD $50</strong> is added to the outstanding balance — applied once per overdue invoice, not recurring.</li>
+      </ol>
+      <p>Continued non-payment beyond 30 days may result in termination of the project under A8, with all work completed to date payable immediately, and completed deliverables withheld pending payment.</p>
+    </div>
+
+    <div class="clause" id="a7">
+      <div class="clause-h"><span class="c-id">A7</span>Communication &amp; Revisions</div>
+      <ul>
+        <li>All formal communication (approvals, feedback, change requests) should be in writing (email) to ensure a clear record for both parties.</li>
+        <li>The Contractor responds to Client communication within 2 business days under normal circumstances.</li>
+        <li>Reasonable delays in providing feedback, content, or approvals may extend the project timeline accordingly. The Contractor is not responsible for delays caused by the Client's response time.</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="a8">
+      <div class="clause-h"><span class="c-id">A8</span>Termination</div>
+      <p>Either party may terminate an engagement by written notice (email is sufficient). On termination:</p>
+      <ul>
+        <li>The Client must pay for all work completed up to the date of termination, including time spent on work in progress.</li>
+        <li>Any outstanding invoices become immediately due and payable.</li>
+        <li>Any deposit already paid is non-refundable and is applied toward work completed.</li>
+        <li>Completed and paid-for deliverables are provided to the Client in a reasonable timeframe following final payment.</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="a9">
+      <div class="clause-h"><span class="c-id">A9</span>Liability</div>
+      <p>VANDENCODE performs all services with reasonable skill and care. However, to the maximum extent permitted by law, VANDENCODE's total liability in connection with any project is limited to the total fees paid by the Client for that project. VANDENCODE is not liable for indirect, consequential, or reputational loss, including loss of revenue, business, or data, except where such liability cannot be excluded under the Australian Consumer Law (Schedule 2 of the Competition and Consumer Act 2010 (Cth)).</p>
+      <p class="inline-note">Nothing in this document excludes, restricts, or modifies any consumer guarantee, right, or remedy under the Australian Consumer Law that cannot lawfully be excluded.</p>
+    </div>
+
+    <div class="clause" id="a10">
+      <div class="clause-h"><span class="c-id">A10</span>Governing Law</div>
+      <p>These Terms &amp; Conditions, and any contract or invoice issued under them, are governed by the laws of Victoria, Australia. Any disputes are subject to the non-exclusive jurisdiction of the courts of Victoria.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ PART B ══════════ -->
+  <div class="part-block">
+    <div class="part-head">
+      <span class="part-num">PART B</span>
+      <span class="part-title">Web Development &amp; Software</span>
+    </div>
+    <p class="part-intro">These terms apply specifically to engagements involving website design, development, custom software, or related technical work. They apply in addition to the General Terms in Part A.</p>
+
+    <div class="clause" id="b1">
+      <div class="clause-h"><span class="c-id">B1</span>Project Estimates</div>
+      <p>Each project is quoted as an estimated number of hours and an associated estimated total cost, based on the agreed scope of work. Actual time required may vary depending on the condition of existing systems, the complexity of requests, additional revisions, and technical issues discovered during development. Any work required beyond the original estimate is billed at the agreed hourly rate, and the Contractor will notify the Client before undertaking substantial additional work.</p>
+    </div>
+
+    <div class="clause" id="b2">
+      <div class="clause-h"><span class="c-id">B2</span>Payment Schedule</div>
+      <p>Unless a different schedule is agreed in writing for a specific project, the standard payment schedule for web/software projects is:</p>
+      <ul>
+        <li>20% deposit prior to commencement of work (non-refundable once work has commenced).</li>
+        <li>30% progress payment at approximately the midpoint of the project.</li>
+        <li>50% final payment upon project completion and prior to website launch or final delivery.</li>
+      </ul>
+      <p>Final publication, launch, or delivery of completed work occurs only after the final invoice has been paid in full.</p>
+    </div>
+
+    <div class="clause" id="b3">
+      <div class="clause-h"><span class="c-id">B3</span>Scope, Revisions &amp; Additional Work</div>
+      <ul>
+        <li>Reasonable revisions related to the agreed scope are included within the quoted project hours.</li>
+        <li>Requests that substantially alter the agreed scope, add new functionality, create additional pages, or require significant redesign work are treated as additional work and billed at the standard hourly rate.</li>
+        <li>Major changes to an agreed page or feature structure constitute a scope change and are billed separately.</li>
+        <li>The Contractor will notify the Client and seek agreement before undertaking substantial additional work.</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="b4">
+      <div class="clause-h"><span class="c-id">B4</span>Client Responsibilities</div>
+      <p>The Client agrees to:</p>
+      <ul>
+        <li>Provide necessary access credentials (e.g. hosting, domain, CMS access) in a timely manner.</li>
+        <li>Supply all required text, images, and branding assets needed to complete the project.</li>
+        <li>Review deliverables and provide feedback within a reasonable timeframe.</li>
+        <li>Ensure they hold the necessary rights and permissions to use all content and images supplied to the Contractor.</li>
+      </ul>
+      <p>Project timelines may be extended where delays occur in receiving required materials, access, or feedback from the Client.</p>
+    </div>
+
+    <div class="clause" id="b5">
+      <div class="clause-h"><span class="c-id">B5</span>Ownership &amp; Intellectual Property</div>
+      <p>Upon receipt of full payment for a project:</p>
+      <ul>
+        <li>Ownership of the completed website design, code customisations, and content created specifically for the project transfers to the Client.</li>
+        <li>The Client retains ownership of all content, photographs, logos, and branding materials they supplied.</li>
+        <li>VANDENCODE retains the right to display the completed project within its own portfolio, case studies, and marketing materials, unless otherwise agreed in writing with the Client.</li>
+      </ul>
+      <p>Until full payment is received, all work remains the property of VANDENCODE and may not be published, used, or distributed by the Client.</p>
+    </div>
+
+    <div class="clause" id="b6">
+      <div class="clause-h"><span class="c-id">B6</span>Hosting &amp; Third-Party Services</div>
+      <p>Unless otherwise agreed in writing, the Client is responsible for all ongoing costs associated with website hosting, domain registration, and any premium themes, plugins, or third-party services used in the project. VANDENCODE is not responsible for outages, software updates, security issues, or other problems caused by third-party services outside its direct control.</p>
+    </div>
+
+    <div class="clause" id="b7">
+      <div class="clause-h"><span class="c-id">B7</span>Warranty &amp; Post-Launch Support</div>
+      <p>VANDENCODE provides bug-fix support, free of charge, for issues directly related to work completed under the project, for 21 days following project completion or website launch. Any further maintenance, content updates, feature additions, or support requests after this period are billed at the standard hourly rate, unless an ongoing maintenance arrangement has been separately agreed.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ PART C ══════════ -->
+  <div class="part-block">
+    <div class="part-head">
+      <span class="part-num">PART C</span>
+      <span class="part-title">Art &amp; Design Commissions</span>
+    </div>
+    <p class="part-intro">These terms apply specifically to commissioned illustration, graphic design, branding, and other digital art/design work. They apply in addition to the General Terms in Part A. These terms cover commissioned and digital deliverables; they do not cover the sale of physical/original artworks, which are handled under separate arrangements.</p>
+
+    <div class="clause" id="c1">
+      <div class="clause-h"><span class="c-id">C1</span>Commission Pricing</div>
+      <p>Pricing for art and design commissions is quoted as a flat rate per piece or project, agreed in writing before work begins. Pricing depends on factors including complexity, size, intended use (personal vs. commercial), number of revision rounds, and turnaround time requested. A written quote is provided and must be accepted by the Client before the commission is scheduled.</p>
+    </div>
+
+    <div class="clause" id="c2">
+      <div class="clause-h"><span class="c-id">C2</span>Payment Schedule</div>
+      <p>Unless otherwise agreed in writing for a specific commission:</p>
+      <ul>
+        <li>50% deposit is required before any concept work begins. This deposit is non-refundable once work has commenced (see A4).</li>
+        <li>The remaining 50% is due upon completion of the final piece, prior to delivery of final, high-resolution files.</li>
+      </ul>
+      <p>For larger commissions (multi-piece projects or full branding packages), a milestone-based schedule may be agreed instead, and is set out in the written quote.</p>
+    </div>
+
+    <div class="clause" id="c3">
+      <div class="clause-h"><span class="c-id">C3</span>The Commission Process</div>
+      <ol>
+        <li><strong style="color:var(--text)">Brief &amp; Discovery</strong> — the Client provides a written brief, references, and any constraints (size, format, intended use).</li>
+        <li><strong style="color:var(--text)">Concept Stage</strong> — VANDENCODE provides 1–2 rough concept directions for the Client to review.</li>
+        <li><strong style="color:var(--text)">Revisions</strong> — up to 2 rounds of revisions are included once a concept direction is approved.</li>
+        <li><strong style="color:var(--text)">Final Delivery</strong> — final files are delivered in the agreed format(s) upon receipt of final payment.</li>
+      </ol>
+      <p>Additional revision rounds beyond those included in the quote are billed at an agreed additional rate per round, communicated to the Client before proceeding.</p>
+    </div>
+
+    <div class="clause" id="c4">
+      <div class="clause-h"><span class="c-id">C4</span>Client Responsibilities</div>
+      <ul>
+        <li>Provide a clear brief and any reference material in a timely manner.</li>
+        <li>Respond to concept drafts and revision requests within a reasonable timeframe to keep the project on schedule.</li>
+        <li>Ensure they hold the rights to use any reference images, logos, or text supplied to VANDENCODE for the commission.</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="c5">
+      <div class="clause-h"><span class="c-id">C5</span>Usage Rights &amp; Ownership</div>
+      <p>Unless otherwise agreed in writing:</p>
+      <ul>
+        <li>Upon full payment, the Client receives a license to use the final commissioned artwork for the purpose stated in the original brief (e.g. personal use, a specific commercial campaign, branding for a specific business).</li>
+        <li>VANDENCODE retains copyright and underlying ownership of the artwork, including concept sketches, drafts, and source files, unless full copyright transfer is separately negotiated and agreed in writing (typically at an increased commission rate).</li>
+        <li>VANDENCODE retains the right to display the completed commission in their portfolio, social media, and marketing materials, unless the Client requests otherwise in writing — for example, where a piece is confidential or unreleased at the time of completion. Such requests are respected for a mutually agreed period.</li>
+        <li>The Client may not resell, sublicense, mint as an NFT, or use the artwork to train AI models without separate written agreement.</li>
+      </ul>
+    </div>
+
+    <div class="clause" id="c6">
+      <div class="clause-h"><span class="c-id">C6</span>Revisions &amp; Scope Changes</div>
+      <p>Revisions within the agreed concept direction are included as outlined in C3. Requests that substantially change the brief after concept approval (e.g. a full restart, a different subject, a different style direction) are treated as a new commission and quoted accordingly.</p>
+    </div>
+
+    <div class="clause" id="c7">
+      <div class="clause-h"><span class="c-id">C7</span>Cancellation</div>
+      <p>If the Client cancels a commission after the deposit has been paid but before completion, the deposit is retained in full to cover concept work and time already committed. If cancellation occurs after concept approval but before final delivery, VANDENCODE reserves the right to invoice for work completed beyond the deposit amount, calculated on a pro-rata basis relative to the total commission price.</p>
+    </div>
+  </div>
+
+  <div class="end-divider">
+    <div class="end-divider-line"></div>
+    <div class="end-divider-mark">END OF DOCUMENT</div>
+    <div class="end-divider-line"></div>
+  </div>
+
+  <div class="contact-block">
+    <p>Questions about these terms? Get in touch before starting a project.</p>
+    <a href="mailto:vandencode@gmail.com">vandencode@gmail.com</a>
+  </div>
+
+</div>
+
+<button class="back-to-top" id="backTop" aria-label="Back to top">↑</button>
+
+<footer>
+  <span>© 2026 VANDENCODE<span class="fdot">●</span>Naomi VanDenBerghe</span>
+  <div class="fl">
+    <a href="index.html">Home</a>
+    <a href="https://github.com/nvan8207" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/naomi-vandenberghe/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:vandencode@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+  const cur=document.getElementById('cur');
+  document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cur.classList.add('big'));
+    el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
+  });
+  const hbg=document.getElementById('hbg'),drawer=document.getElementById('drawer');
+  function closeDrawer(){hbg.classList.remove('open');drawer.classList.remove('open');hbg.setAttribute('aria-expanded','false')}
+  hbg.addEventListener('click',()=>{const o=drawer.classList.toggle('open');hbg.classList.toggle('open');hbg.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('.nav-drawer'))closeDrawer()});
+
+  /* back to top button */
+  const backTop=document.getElementById('backTop');
+  window.addEventListener('scroll',()=>{
+    backTop.classList.toggle('show', window.scrollY > 600);
+  });
+  backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
