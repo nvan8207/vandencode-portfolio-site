@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VANDENCODE is an independent web studio creating thoughtful websites for small businesses." />
+  <title>Website Care & Support — VANDENCODE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="cur"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">VANDEN<span>CODE</span></a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="work.html">Work</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#contact" class="nav-special">Start a Project</a>
+  </div>
+  <button class="hamburger" id="hbg" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html#about" onclick="closeDrawer()">About</a>
+  <a href="index.html#services" onclick="closeDrawer()">Services</a>
+  <a href="work.html" onclick="closeDrawer()">Work</a>
+  <a href="index.html#process" onclick="closeDrawer()">Process</a>
+  <a href="index.html#contact" class="nav-special" onclick="closeDrawer()">Start a Project</a>
+</div>
+
+<div class="page-header">
+  <div class="ph-inner">
+    <a href="index.html#services" class="ph-back">← Back to Services</a>
+    <div class="ph-label">Service 04 / Ongoing Support</div>
+    <div class="ph-title">WEBSITE CARE<br><span>&amp; SUPPORT</span></div>
+    <p class="ph-sub">Practical ongoing help for businesses that would quite reasonably prefer to run the business rather than babysit the website.</p>
+  </div>
+</div>
+<main class="service-page">
+  <section class="service-lead reveal">
+    <div class="eyebrow">Websites are not decorative fossils</div>
+    <p class="lead-copy">A website needs occasional attention after launch. Care and support can keep content current, catch small problems before they become large ones, and give you someone to call when changes are needed.</p>
+  </section>
+  
+        <section class="detail-grid reveal">
+          <h2 class="detail-title">SUPPORT CAN INCLUDE</h2>
+          <div class="detail-copy">
+            <ul class="detail-list">
+              <li>Content and service updates</li>
+<li>Small layout or functionality changes</li>
+<li>Routine technical maintenance</li>
+<li>Performance and usability checks</li>
+<li>Troubleshooting</li>
+<li>Planning future improvements</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="detail-grid reveal">
+          <h2 class="detail-title">A SENSIBLE FIT FOR</h2>
+          <div class="detail-copy">
+            <ul class="detail-list">
+              <li>Businesses without an internal web person</li>
+<li>Clients who want continuity after a VANDENCODE build</li>
+<li>Sites that change regularly throughout the year</li>
+<li>Business owners who do not want every minor update to become a new procurement exercise</li>
+            </ul>
+          </div>
+        </section>
+        
+  <div class="service-cta reveal">
+    <h2>If you want an ongoing relationship rather than a ceremonial handover and disappearance into the mist, we can arrange that.</h2>
+    <a href="index.html#contact">Start a project →</a>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 VANDENCODE<span class="fdot">●</span>Independent Web Studio</span>
+  <div class="fl">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="mailto:vandencode@gmail.com">Email</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
