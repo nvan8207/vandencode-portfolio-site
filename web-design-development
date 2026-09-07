@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VANDENCODE is an independent web studio creating thoughtful websites for small businesses." />
+  <title>Web Design & Development — VANDENCODE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="cur"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">VANDEN<span>CODE</span></a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="work.html">Work</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#contact" class="nav-special">Start a Project</a>
+  </div>
+  <button class="hamburger" id="hbg" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html#about" onclick="closeDrawer()">About</a>
+  <a href="index.html#services" onclick="closeDrawer()">Services</a>
+  <a href="work.html" onclick="closeDrawer()">Work</a>
+  <a href="index.html#process" onclick="closeDrawer()">Process</a>
+  <a href="index.html#contact" class="nav-special" onclick="closeDrawer()">Start a Project</a>
+</div>
+
+<div class="page-header">
+  <div class="ph-inner">
+    <a href="index.html#services" class="ph-back">← Back to Services</a>
+    <div class="ph-label">Service 01 / New Websites</div>
+    <div class="ph-title">WEB DESIGN<br><span>&amp; DEVELOPMENT</span></div>
+    <p class="ph-sub">Purpose-built websites for small businesses that need a strong, thoughtful online presence from the ground up.</p>
+  </div>
+</div>
+<main class="service-page">
+  <section class="service-lead reveal">
+    <div class="eyebrow">Built around the business, not the template</div>
+    <p class="lead-copy">A good small-business website should feel like an extension of the business behind it: clear, distinctive, useful and easy for customers to navigate.</p>
+  </section>
+  
+        <section class="detail-grid reveal">
+          <h2 class="detail-title">WHAT THIS SERVICE IS FOR</h2>
+          <div class="detail-copy">
+            <ul class="detail-list">
+              <li>New businesses establishing their first proper website</li>
+<li>Independent professionals moving beyond social-media-only presence</li>
+<li>Businesses replacing a basic DIY or temporary site</li>
+<li>Creative businesses that need a more considered visual presentation</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="detail-grid reveal">
+          <h2 class="detail-title">WHAT CAN BE INCLUDED</h2>
+          <div class="detail-copy">
+            <ul class="detail-list">
+              <li>Website structure and content planning</li>
+<li>Responsive interface design</li>
+<li>Front-end development</li>
+<li>Contact and enquiry pathways</li>
+<li>Content management where appropriate</li>
+<li>Launch setup, testing and handover</li>
+            </ul>
+          </div>
+        </section>
+        
+  <div class="service-cta reveal">
+    <h2>Starting from scratch? Let’s build the website around the business you are actually creating.</h2>
+    <a href="index.html#contact">Start a project →</a>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 VANDENCODE<span class="fdot">●</span>Independent Web Studio</span>
+  <div class="fl">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="mailto:vandencode@gmail.com">Email</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
