@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VANDENCODE is an independent web studio creating thoughtful websites for small businesses." />
+  <title>E-commerce & Web Functionality — VANDENCODE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="cur"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">VANDEN<span>CODE</span></a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="work.html">Work</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#contact" class="nav-special">Start a Project</a>
+  </div>
+  <button class="hamburger" id="hbg" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html#about" onclick="closeDrawer()">About</a>
+  <a href="index.html#services" onclick="closeDrawer()">Services</a>
+  <a href="work.html" onclick="closeDrawer()">Work</a>
+  <a href="index.html#process" onclick="closeDrawer()">Process</a>
+  <a href="index.html#contact" class="nav-special" onclick="closeDrawer()">Start a Project</a>
+</div>
+
+<div class="page-header">
+  <div class="ph-inner">
+    <a href="index.html#services" class="ph-back">← Back to Services</a>
+    <div class="ph-label">Service 03 / Functional Web</div>
+    <div class="ph-title">E-COMMERCE<br><span>&amp; FUNCTIONALITY</span></div>
+    <p class="ph-sub">Useful functionality for websites that need to do more than sit politely on the internet and look attractive.</p>
+  </div>
+</div>
+<main class="service-page">
+  <section class="service-lead reveal">
+    <div class="eyebrow">Make the website earn its keep</div>
+    <p class="lead-copy">Some businesses need more than pages of information. VANDENCODE can plan and build practical functionality around the way customers interact with your business.</p>
+  </section>
+  
+        <section class="detail-grid reveal">
+          <h2 class="detail-title">EXAMPLES</h2>
+          <div class="detail-copy">
+            <ul class="detail-list">
+              <li>Online stores and product catalogues</li>
+<li>Custom galleries and filtering</li>
+<li>Contact, referral and enquiry forms</li>
+<li>Booking or external-service integrations</li>
+<li>Content-management tools</li>
+<li>Interactive business-specific features</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="detail-grid reveal">
+          <h2 class="detail-title">HOW IT IS APPROACHED</h2>
+          <div class="detail-copy">
+            <ul class="detail-list">
+              <li>Start with the customer task rather than the technology</li>
+<li>Choose the simplest maintainable solution that meets the need</li>
+<li>Design functionality to fit naturally into the rest of the site</li>
+<li>Test across devices and common user journeys</li>
+<li>Provide a clear handover for anything the client manages</li>
+            </ul>
+          </div>
+        </section>
+        
+  <div class="service-cta reveal">
+    <h2>Have a particular feature in mind? Describe the business problem first; the technical solution can come afterwards.</h2>
+    <a href="index.html#contact">Start a project →</a>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 VANDENCODE<span class="fdot">●</span>Independent Web Studio</span>
+  <div class="fl">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="mailto:vandencode@gmail.com">Email</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
