@@ -193,46 +193,110 @@
 <div id="contact">
   <div class="cw">
     <div class="reveal">
-      <div class="c-big">LET'S<br><span class="ca">BUILD</span><br><span class="cs">SOMETHING.</span></div>
-      <p class="c-sub">Have a new website in mind, or an old one that has rather overstayed its welcome? Tell VANDENCODE what you are working with and where you would like to take it.</p>
+      <div class="c-big">
+        LET'S<br>
+        <span class="ca">BUILD</span><br>
+        <span class="cs">SOMETHING.</span>
+      </div>
+
+      <p class="c-sub">
+        Have a new website in mind, or an old one that has rather overstayed its welcome?
+        Tell VANDENCODE what you are working with and where you would like to take it.
+      </p>
+
       <div class="c-links">
-        <a href="mailto:vandencode@gmail.com" class="c-lnk"><div class="c-dot"></div>vandencode@gmail.com</a>
+        <a href="mailto:vandencode@gmail.com" class="c-lnk">
+          <div class="c-dot"></div>
+          vandencode@gmail.com
+        </a>
       </div>
     </div>
+
     <form
-    class="form reveal"
-    name="project-enquiry"
-    method="POST"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-    action="/thank-you.html"
->
-    <input type="hidden" name="form-name" value="project-enquiry">
+      class="form reveal"
+      name="project-enquiry"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/thank-you.html"
+    >
+      <input
+        type="hidden"
+        name="form-name"
+        value="project-enquiry"
+      >
 
-    <p class="bot-field" aria-hidden="true">
+      <p class="bot-field" aria-hidden="true">
         <label>
-            Don't fill this out:
-            <input name="bot-field">
+          Don't fill this out:
+          <input name="bot-field">
         </label>
-    </p>
+      </p>
 
-    <!-- existing form fields -->
-</form>
-      <div class="ff"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="Jane Smith" /></div>
-      <div class="ff"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jane@example.com" /></div>
+      <div class="ff">
+        <label for="name">Your Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Jane Smith"
+          required
+        />
+      </div>
+
+      <div class="ff">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="jane@example.com"
+          required
+        />
+      </div>
+
       <div class="ff">
         <label for="service">What can we help with?</label>
-        <select id="service" name="service">
+        <select
+          id="service"
+          name="service"
+          required
+        >
           <option value="">— Select —</option>
-          <option>Web design &amp; development</option>
-          <option>Website redesign</option>
-          <option>E-commerce &amp; web functionality</option>
-          <option>Website care &amp; support</option>
-          <option>Not sure yet</option>
+          <option value="web-design-development">
+            Web design &amp; development
+          </option>
+          <option value="website-redesign">
+            Website redesign
+          </option>
+          <option value="ecommerce-functionality">
+            E-commerce &amp; web functionality
+          </option>
+          <option value="website-care-support">
+            Website care &amp; support
+          </option>
+          <option value="not-sure">
+            Not sure yet
+          </option>
         </select>
       </div>
-      <div class="ff"><label for="message">Project Notes</label><textarea id="message" name="message" placeholder="Tell us a little about your business, current website, and what you would like to improve..."></textarea></div>
-      <button class="form-btn" type="submit">Send Enquiry →</button>
+
+      <div class="ff">
+        <label for="message">Project Notes</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Tell us a little about your business, current website, and what you would like to improve..."
+          required
+        ></textarea>
+      </div>
+
+      <button
+        class="form-btn"
+        type="submit"
+      >
+        Send Enquiry →
+      </button>
     </form>
   </div>
 </div>
