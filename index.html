@@ -199,7 +199,25 @@
         <a href="mailto:vandencode@gmail.com" class="c-lnk"><div class="c-dot"></div>vandencode@gmail.com</a>
       </div>
     </div>
-    <form class="form reveal" action="#" method="post">
+    <form
+    class="form reveal"
+    name="project-enquiry"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    action="/thank-you.html"
+>
+    <input type="hidden" name="form-name" value="project-enquiry">
+
+    <p class="bot-field" aria-hidden="true">
+        <label>
+            Don't fill this out:
+            <input name="bot-field">
+        </label>
+    </p>
+
+    <!-- existing form fields -->
+</form>
       <div class="ff"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="Jane Smith" /></div>
       <div class="ff"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jane@example.com" /></div>
       <div class="ff">
