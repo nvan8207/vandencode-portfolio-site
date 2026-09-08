@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Thank You — VANDENCODE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .thank-you {
+      min-height: 100vh;
+      padding: calc(var(--nav-h) + 5rem) var(--gut) 5rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .thank-you::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(var(--line) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: .75;
+    }
+    .thank-you::after {
+      content: '';
+      position: absolute;
+      right: -8%;
+      top: -10%;
+      width: 42%;
+      height: 120%;
+      background: var(--forest);
+      clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .thanks-inner {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .thanks-stamp {
+      display: inline-block;
+      border: 1.5px solid var(--forest);
+      color: var(--forest);
+      background: rgba(241,234,219,.8);
+      font-size: .6rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      padding: .28rem .8rem;
+      transform: rotate(-1deg);
+      margin-bottom: 1.5rem;
+    }
+    .thanks-title {
+      font-family: var(--ff-d);
+      font-size: clamp(5rem, 13vw, 11rem);
+      line-height: .84;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+    .thanks-title span { color: var(--acid-deep); }
+    .thanks-copy {
+      max-width: 570px;
+      font-family: var(--ff-s);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.55rem);
+      line-height: 1.55;
+      color: var(--ink-soft);
+      margin-bottom: 2rem;
+    }
+    .thanks-note {
+      max-width: 540px;
+      font-size: .75rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 2.25rem;
+    }
+    .thanks-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+    }
+    .thanks-primary, .thanks-secondary {
+      display: inline-flex;
+      align-items: center;
+      padding: .8rem 1.5rem;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: transform .15s, background .2s, color .2s;
+    }
+    .thanks-primary {
+      background: var(--acid);
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .thanks-secondary {
+      border: 1px solid var(--forest);
+      color: var(--forest);
+      background: rgba(241,234,219,.7);
+    }
+    .thanks-primary:hover, .thanks-secondary:hover { transform: translateY(-2px); }
+    .thanks-secondary:hover {
+      background: var(--forest);
+      color: var(--paper);
+    }
+    @media (max-width: 960px) {
+      .thank-you::after { width: 26%; }
+    }
+    @media (max-width: 700px) {
+      .thank-you {
+        align-items: flex-start;
+        padding-top: calc(var(--nav-h) + 5rem);
+      }
+      .thank-you::after {
+        top: auto;
+        right: -20%;
+        bottom: -12%;
+        width: 80%;
+        height: 32%;
+        transform: rotate(-4deg);
+      }
+      .thanks-title { font-size: clamp(4.5rem, 22vw, 7rem); }
+    }
+  </style>
+</head>
+<body>
+  <div id="cur"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">VANDEN<span>CODE</span></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="work.html">Work</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#contact" class="nav-special">Start a Project</a>
+    </div>
+    <button class="hamburger" id="hbg" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="drawer">
+    <a href="index.html#about" onclick="closeDrawer()">About</a>
+    <a href="index.html#services" onclick="closeDrawer()">Services</a>
+    <a href="work.html" onclick="closeDrawer()">Work</a>
+    <a href="index.html#process" onclick="closeDrawer()">Process</a>
+    <a href="index.html#contact" class="nav-special" onclick="closeDrawer()">Start a Project</a>
+  </div>
+
+  <main class="thank-you">
+    <div class="thanks-inner">
+      <div class="thanks-stamp">Enquiry received / Thank you</div>
+      <h1 class="thanks-title">MESSAGE<br><span>RECEIVED.</span></h1>
+      <p class="thanks-copy">
+        Thank you for getting in touch. Your project enquiry has made its way safely to VANDENCODE.
+      </p>
+      <p class="thanks-note">
+        I'll read through the details you've sent and get back to you as soon as I can.
+        In the meantime, you can head back to the studio or have a look through some recent work.
+      </p>
+      <div class="thanks-actions">
+        <a href="index.html" class="thanks-primary">← Back to VANDENCODE</a>
+        <a href="work.html" class="thanks-secondary">View Work →</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
